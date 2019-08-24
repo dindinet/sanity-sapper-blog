@@ -25,7 +25,7 @@
     return { post: {
       ...post,
       body: blocksToHtml({blocks: post.body, serializers, ...client.clientConfig }),
-      body: blocksToHtml({blocks: post.mainImage, serializers, ...client.clientConfig })
+      mimage: blocksToHtml({blocks: post.mainImage, serializers, ...client.clientConfig })
     } };
 	}
 </script>
@@ -103,6 +103,6 @@
 <h1>{post.title}</h1>
 
 <div class='content'>
-  {@html post.mainImage}
+  {@html post.mimage}
 	{@html post.body}
 </div>
