@@ -99,10 +99,9 @@
 <svelte:head>
 	<title>{post.title}</title>
 </svelte:head>
-
+{@html post.mimage}
 <h1>{post.title}</h1>
 
 <div class='content'>
-  {@html post.mimage}
 	{@html post.body}
 </div>
