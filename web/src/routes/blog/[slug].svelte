@@ -24,7 +24,8 @@
     const post = await client.fetch(query, { slug }).catch(err => this.error(500, err))
     return { post: {
       ...post,
-      body: blocksToHtml({blocks: post.body, serializers, ...client.clientConfig })
+      body: blocksToHtml({blocks: post.body, serializers, ...client.clientConfig }),
+      body: blocksToHtml({blocks: post.mainImage, serializers, ...client.clientConfig })
     } };
 	}
 </script>
